@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="header">
+    <div class="title" *ngIf="randomState">
+      Find the state:
+      <span><em>{{randomState}}</em></span>
+    </div>
+    <div class="title" *ngIf="selectedState">
+      Selected:
+      <span [ngStyle]="setMyStyles()"><b>{{selectedState}}</b></span>
+      <span [hidden]="selectedState !== randomState"
+        [ngStyle]="setMyStyles()"><em>  Good Job!</em></span>
+    </div>
+  </div>
+  <div class="map-container">
+    <div class="map-frame">
+      <div id="map-id"></div>
+    </div>
+  </div>
+</div>
